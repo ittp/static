@@ -13,6 +13,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -34,25 +35,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          
-      - name: ssh deploy
+      - name: Ping URL (JavaScript action)
         # You may pin to the exact commit or the version.
-        # uses: easingthemes/ssh-deploy@c711f2c3391cac2876bf4c833590077f02e4bcb8
-        uses: easingthemes/ssh-deploy@v2.2.11
+        # uses: soul-wish/ping-url-javascript-action@a859fd903f27430ca566fbe94da9ce2c5e0c04d9
+        uses: soul-wish/ping-url-javascript-action@v1.2
         with:
-          # Private Key
-          SSH_PRIVATE_KEY: 
-          # Remote host
-          REMOTE_HOST: 
-          # Remote user
-          REMOTE_USER: 
-          # Remote port
-          REMOTE_PORT: # optional, default is 22
-          # Source directory
-          SOURCE: # optional, default is 
-          # Target directory
-          TARGET: # optional, default is /home/REMOTE_USER/
-          # Arguments to pass to rsync
-          ARGS: # optional, default is -rltgoDzvO
-          # An array of folder to exclude
-          EXCLUDE: # optional, default is 
+          # URL to ping
+          url: 
