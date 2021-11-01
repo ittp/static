@@ -1,4 +1,3 @@
 #!/bin/sh
 
-uci export network >> /tmp/uci-network
-
+uci export network > /tmp/uci-network
